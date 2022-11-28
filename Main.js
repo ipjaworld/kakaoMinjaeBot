@@ -54,11 +54,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
     if(msg == "/서란희"){
     replier.reply("서란희 : 뜨거운 심장을 가진 사람");
     }
-    
-    if(msg == "/유정"){
-    replier.reply("유정 : 이 시대의 즐겜러(?)");
-    }
-    
+
     if(msg == "/피그"){
     replier.reply("피그 : 일섭할배비틱러");
     }
@@ -71,20 +67,8 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
     replier.reply("우라라 : 롤 개잘함");
     }
     
-    if(msg == "/타마"){
-    replier.reply("타마 : 서클막내");
-    }
-    
-    if(msg == "/골드쉽"){
-    replier.reply("골드쉽 : 한섭 예비 랭커");
-    }
-    
     if(msg == "/가렌"){
     replier.reply("가렌 : 인자운이 좋지 않은 자");
-    }
-    
-    if(msg == "/곽두팔"){
-    replier.reply("곽두팔 : 이름만 쎈 아버지");
     }
     
     if(msg == "/아젤룬"){
@@ -97,14 +81,6 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
     
     if(msg == "/하늘"){
     replier.reply("하늘 : 말딸은 무과금으로 가능합니다");
-    }
-    
-    if(msg == "/도라"){
-    replier.reply("도라 : 태블릿을 소중히 여겨주세요");
-    }
-    
-    if(msg == "/김맥퀸"){
-    replier.reply("김맥퀸 : 맥퀸 맘이지만 맥퀸이 어딧죠?");
     }
     
     if(msg == "/보정"){
