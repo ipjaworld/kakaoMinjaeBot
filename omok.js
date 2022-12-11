@@ -1,16 +1,25 @@
+// 카카오톡 오목 기능입니다.
+
 let base = "";
 let x = "";
 let d = 0;
+
+function initializationOmok(){
+   base = "";
+   x = "";
+   d = 0;
+}
+
 function response(room, msg, sender, isGroupChat, replier)
 {
-   if (msg == "오목")
+   if (msg == "!오목")
    {
       base = "▒▒▒▒▒▒▒▒▒▒▒▒①\n▒▒▒▒▒▒▒▒▒▒▒▒②\n▒▒▒▒▒▒▒▒▒▒▒▒③\n▒▒▒▒▒▒▒▒▒▒▒▒④\n▒▒▒▒▒▒▒▒▒▒▒▒⑤\n▒▒▒▒▒▒▒▒▒▒▒▒⑥\n▒▒▒▒▒▒▒▒▒▒▒▒⑦\n▒▒▒▒▒▒▒▒▒▒▒▒⑧\n▒▒▒▒▒▒▒▒▒▒▒▒⑨\n▒▒▒▒▒▒▒▒▒▒▒▒⑩\n▒▒▒▒▒▒▒▒▒▒▒▒⑪\n▒▒▒▒▒▒▒▒▒▒▒▒⑫\n①②③④⑤⑥⑦⑧⑨⑩⑪⑫";
       x = "1";
       d = 0;
       replier.reply("ㅡ플레이방식ㅡ\n초기화:오목 \n●돌:1.x좌표.y좌표\n○돌:2.x좌표.y좌표\n무르기:무르기\n(x,y는 1~12)\n"+base);
    }
-   if (msg.indexOf("1.") == 0)
+   if (msg.indexOf("1.") == 0 && msg.length == 5 && base != "")
    {
       if (x == "1")
       {
@@ -39,7 +48,7 @@ function response(room, msg, sender, isGroupChat, replier)
          replier.reply("백돌(2) 차례");
       }
    }
-   if (msg.indexOf("2.") == 0)
+   if (msg.indexOf("2.") == 0 && msg.length == 5 && base != "")
    {
       if (x == "2")
       {
@@ -86,4 +95,10 @@ function response(room, msg, sender, isGroupChat, replier)
          replier.reply("이미 사용함");
       }
    }
+   if (msg == "!포기오목")
+   {
+      initializationOmok();
+      replier.reply("오목 게임이 종료되었습니다.");
+   }
+
 }
